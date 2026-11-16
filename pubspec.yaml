@@ -1,7 +1,9 @@
 name: inid_flutter
 description: Sign in with InID in Flutter apps. The system's secure browser, PKCE, verified ID tokens, secure token storage and ready-made widgets.
 version: 0.1.0
-homepage: https://inid.co
+homepage: https://inid.co/docs/languages/
+repository: https://github.com/inidhq/inid-flutter
+issue_tracker: https://github.com/inidhq/inid-flutter/issues
 topics:
   - authentication
   - oauth
