@@ -1,6 +1,6 @@
 # inid_flutter
 
-Sign in with [InID](https://inid.co) in Flutter apps: Face ID, a fingerprint or a code to the phone, no passwords.
+Sign in with [InID](https://inid.co) in Flutter apps: a passkey (Face ID, fingerprint, Windows Hello or the device PIN) or a code to the phone, no passwords.
 
 The app is a **public client** of InID (RFC 8252). It has no secret key: it signs in with the authorization code flow and PKCE (S256), in the system's secure browser (ASWebAuthenticationSession on iOS and macOS, Chrome Custom Tabs on Android, never a WebView). InID sends the person back to the app's own scheme (`nube://callback`). The session is InID's ID token, verified on the device with InID's public keys, plus a refresh token that renews it. Both are kept in the Keychain or the Keystore.
 
