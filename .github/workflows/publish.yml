@@ -36,7 +36,8 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
-      - run: sed -i "s/^version: .*/version: ${GITHUB_REF_NAME#v}/" pubspec.yaml
+      - run: |
+          sed -i "s/^version: .*/version: ${GITHUB_REF_NAME#v}/" pubspec.yaml
       # pub.dev shows a changelog: this version's, from what changed since the last tag
       - run: |
           previous=$(git describe --tags --abbrev=0 --match 'v[0-9]*' "$GITHUB_REF_NAME^" 2>/dev/null || true)
